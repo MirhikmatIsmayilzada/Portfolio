@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/scss/index.css">
+    <title>Services</title>
+</head>
+
+<body class="bg-image">
+    <header id="header">
+        <div class="header-nav">
+            <div class="logo">
+                <h1 class="logo-content">Mirhikmat Ismayılzada</h1>
+            </div>
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html">ABOUT</a></li>
+                    <li class="nav-item"><a href="./skills.html">SKILLS</a></li>
+                    <li class="nav-item"><a href="./services.html" class="active">SERVICES</a></li>
+                    <li class="nav-item"><a href="./portfolio.html">PORTFOLIO</a></li>
+                </ul>
+             
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="services">
+            <div class="container">
+                <div class="services-wrapper">
+                    <div class="user-bio">
+                        <div class="user-image">
+                            <img src="./assets/images/mirhikmet.jpg" alt="user">
+                        </div>
+                        <div class="user-info">
+                            <h1 class="user-name">Mirhikmət İsmayılzadə</h1>
+                            <p class="user-job">Front-End Developer</p>
+                            <p class="user-description">
+                                Veb proqramlaşdırma və inkişafı sahəsində yüksək səviyyəli təcrübə və bilik.</p>
+
+                        </div>
+                        <div class="user-socials">
+                            <ul class="social-list">
+                                <li class="social-item"><a href="https://www.instagram.com/mirhikmatismayilzada/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li class="social-item"><a href="https://x.com/Mirhikmat7" target="_blank"><i
+                                            class="fa-brands fa-twitter"></i></a></li>
+                                <li class="social-item"><a href="https://github.com/MirhikmatIsmayilzada" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="contact-me">
+                            <a href="mailto:mirhikmatismayilzada@gmail.com"><span class="contact-span">Email
+                                </span><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="user-services">
+                        <div class="services-wrapper">
+                            <div class="title-content">
+                                <h2 class="services-title">
+                                    Services
+                                </h2>
+                            </div>
+                            <div class="content-swiper">
+                                <div class="content">
+                                    <p class="services-head-content">Nə təklif edirəm?</p>
+                                    <p class="services-content">
+                                        Peşəkar və funksional veb interfeyslər yaratmaqla layihənizi daha cəlbedici və
+                                        istifadəyə yararlı edirəm.
+                                    </p>
+                                </div>
+                                <div class="services-swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide service-card bg-blue">
+                                            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                                            <h3>Assess Responsive Web Design</h3>
+                                            <p>Saytların bütün cihazlarda düzgün və funksional görünməsini təmin edirəm.
+                                            </p>
+                                        </div>
+
+                                        <div class="swiper-slide service-card bg-green">
+                                            <div class="icon"><i class="fas fa-code"></i></div>
+                                            <h3>App Dev Experience</h3>
+                                            <p>Frontend əsaslı mobil və web tətbiqlərin hazırlanması üzrə təcrübə.</p>
+                                        </div>
+
+                                        <div class="swiper-slide service-card bg-orange">
+                                            <div class="icon"><i class="fas fa-check-circle"></i></div>
+                                            <h3>Verify Frontend Competency</h3>
+                                            <p>Kod keyfiyyəti, semantik HTML və komponent əsaslı strukturları
+                                                yoxlayıram.
+                                            </p>
+                                        </div>
+
+                                        <div class="swiper-slide service-card bg-red">
+                                            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                                            <h3>Security and PM Inspection</h3>
+                                            <p>Frontend təhlükəsizlik boşluqlarını və performans məsələlərini analiz
+                                                edirəm.
+                                            </p>
+                                        </div>
+
+                                        <div class="swiper-slide service-card bg-purple">
+                                            <div class="icon"><i class="fas fa-user-check"></i></div>
+                                            <h3>UX Commitment and Integration</h3>
+                                            <p>İstifadəçi təcrübəsinə önəm verərək UI elementlərini UX prinsipləri ilə
+                                                uyğunlaşdırıram.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="bottom-box">
+                            <h3 class="box-title">Sizin yeni layihəniz var?</h3>
+                            <div class="box-content">İndi mənimlə əlaqə saxla və layihən üçün xüsusi qiymət əldə et.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/77beeaadba.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.services-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true, 
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+        });
+    </script>
+
+    <script src="./assets/js/services.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/scss/admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1 class="admin-title"><i class="fa-solid fa-user-gear"></i> Admin Panel</h1>
+
+        <form id="adminForm" class="admin-form">
+            <h2><i class="fa-solid fa-user"></i> İstifadəçi Məlumatları</h2>
+
+            <div class="form-group">
+                <label for="jobInput">Peşə:</label>
+                <input type="text" id="jobInput" placeholder="Məs: Front-End Developer">
+            </div>
+
+            <div class="form-group">
+                <label for="descInput">Qısa Bio:</label>
+                <textarea id="descInput" rows="3" placeholder="Qısa bio..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="aboutInput">Haqqında:</label>
+                <textarea id="aboutInput" rows="4" placeholder="Haqqında məlumat..."></textarea>
+            </div>
+
+            <h2><i class="fa-solid fa-chart-simple"></i> Statistikalar</h2>
+
+            <div class="form-group">
+                <label for="expInput">Təcrübə ili:</label>
+                <input type="number" id="expInput" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="projectsInput">Tamamlanmış layihələr:</label>
+                <input type="number" id="projectsInput" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="companiesInput">İşlədiyim şirkətlər:</label>
+                <input type="number" id="companiesInput" min="0">
+            </div>
+
+            <button type="submit" class="save-btn"><i class="fa-solid fa-floppy-disk"></i> Yadda saxla</button>
+        </form>
+
+        <hr>
+
+        <h2><i class="fa-solid fa-graduation-cap"></i> Təhsil Kartları</h2>
+        <form id="eduForm" class="admin-form">
+            <div class="form-group">
+                <label for="eduTitle">İxtisas / Fənn:</label>
+                <input type="text" id="eduTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="eduUni">Universitet:</label>
+                <input type="text" id="eduUni" required>
+            </div>
+            <div class="form-group">
+                <label for="eduYear">İl:</label>
+                <input type="text" id="eduYear" required>
+            </div>
+            <button type="submit" class="save-btn"><i class="fa-solid fa-plus"></i> Əlavə et</button>
+        </form>
+
+        <div id="eduCards"></div>
+        <h1>Admin Panel - Skills</h1>
+
+        <div class="developer-content-admin">
+            <h3>Developer Content (Başlıq altı)</h3>
+            <label for="developer-content-input">Developer Content:</label>
+            <input type="text" id="developer-content-input" placeholder="Məsələn: 1 ildən az təcrübə">
+            <button id="update-developer-content">Update Developer Content</button>
+        </div>
+
+        <hr>
+
+        <form id="skill-form">
+            <input type="hidden" id="skill-index" value=""> 
+
+            <label for="skill-name">Skill Name:</label>
+            <input type="text" id="skill-name" placeholder="Məsələn: HTML" required>
+
+            <label for="skill-percent">Skill Percent:</label>
+            <input type="number" id="skill-percent" min="0" max="100" placeholder="Məsələn: 90" required>
+
+            <button type="submit">Add / Update Skill</button>
+        </form>
+
+        <h2>Current Skills</h2>
+        <ul id="skill-list"></ul>
+        <h1 class="admin-title"><i class="fa-solid fa-user-gear"></i> Services Admin Panel</h1>
+
+        <form id="services-content-form" class="admin-form">
+            <h2><i class="fa-solid fa-pen-to-square"></i> Services Content</h2>
+            <div class="form-group">
+                <label for="services-head-input">Başlıq (services-head-content)</label>
+                <input type="text" id="services-head-input" placeholder="Nə təklif edirəm?">
+            </div>
+            <div class="form-group">
+                <label for="services-desc-input">İzah (services-content)</label>
+                <textarea id="services-desc-input" rows="3" placeholder="Məzmun..."></textarea>
+            </div>
+            <button type="submit" class="save-btn"><i class="fa-solid fa-floppy-disk"></i> Yadda saxla</button>
+        </form>
+
+        <hr>
+
+        <form id="services-card-form" class="admin-form">
+            <h2><i class="fa-solid fa-layer-group"></i> Services Cards</h2>
+            <input type="hidden" id="card-index" value="">
+            <div class="form-group">
+                <label for="card-title">Card Title</label>
+                <input type="text" id="card-title" placeholder="Məsələn: App Dev Experience" required>
+            </div>
+            <div class="form-group">
+                <label for="card-desc">Card Description</label>
+                <textarea id="card-desc" rows="2" placeholder="Card izahı..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="card-icon">FontAwesome Icon Class</label>
+                <input type="text" id="card-icon" placeholder="Məsələn: fas fa-code" required>
+            </div>
+            <div class="form-group">
+                <label for="card-color">Card Color</label>
+                <select id="card-color">
+                    <option value="bg-blue">Blue</option>
+                    <option value="bg-green">Green</option>
+                    <option value="bg-orange">Orange</option>
+                    <option value="bg-red">Red</option>
+                    <option value="bg-purple">Purple</option>
+                </select>
+            </div>
+            <button type="submit" class="save-btn"><i class="fa-solid fa-plus"></i> Add / Update Card</button>
+        </form>
+
+        <h2>Current Cards</h2>
+        <ul id="services-card-list"></ul>
+
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/77beeaadba.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/admin.js"></script>
+
+</body>
+
+</html>

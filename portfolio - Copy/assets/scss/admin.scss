@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #333;
+}
+
+.admin-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 850px;
+  max-width: 95%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  .admin-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #4e54c8;
+
+    i {
+      margin-right: 8px;
+    }
+  }
+
+  .admin-form {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #222;
+
+      i {
+        margin-right: 6px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #555;
+      }
+
+      input,
+      textarea {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+        font-size: 14px;
+
+        &:focus {
+          border-color: #4e54c8;
+          box-shadow: 0 0 6px rgba(78, 84, 200, 0.4);
+        }
+      }
+    }
+
+    .save-btn,
+    .edit-btn,
+    .delete-btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+
+      &.save-btn {
+        background: #4e54c8;
+        width: 100%;
+        margin-top: 10px;
+
+        &:hover {
+          background: #3b41a1;
+        }
+      }
+
+      &.edit-btn {
+        background: #3498db ;
+
+        &:hover {
+          background: #217dbb;
+        }
+      }
+
+      &.delete-btn {
+        background: #e74c3c;
+
+        &:hover {
+          background: #c0392b;
+        }
+      }
+    }
+  }
+
+  #eduCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+
+    .edu-card {
+      background: #fdfdfd;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      h4 {
+        margin: 0 0 5px 0;
+        color: #333;
+      }
+
+      p {
+        margin: 3px 0;
+        color: #555;
+        font-size: 14px;
+      }
+
+      .edu-actions {
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .developer-content-admin {
+    margin-bottom: 20px;
+
+    h3 {
+      margin-bottom: 10px;
+      color: #4e54c8;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 10px;
+
+      &:focus {
+        border-color: #4e54c8;
+        box-shadow: 0 0 6px rgba(78, 84, 200, 0.4);
+      }
+    }
+
+    button {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      background: #4e54c8;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #3b41a1;
+      }
+    }
+  }
+
+  #skill-list {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:nth-child(1) {
+          background: #ffc107;
+          color: #fff;
+        }
+
+        &:nth-child(2) {
+          background: #dc3545;
+          color: #fff;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+#skills {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+
+    .skills-wrapper {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+
+      .user-bio {
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+
+        .user-image img {
+          width: 150px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+
+        .user-name {
+          font-size: 24px;
+          margin-bottom: 5px;
+        }
+
+        .user-job {
+          font-size: 18px;
+          margin-bottom: 10px;
+          color: #555;
+        }
+
+        .user-description {
+          font-size: 14px;
+          color: #777;
+        }
+
+        .contact-me a {
+          display: inline-flex;
+          align-items: center;
+          margin-top: 10px;
+          color: #333;
+          text-decoration: none;
+
+          i {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .user-skills {
+        flex: 2;
+
+        .skills-title {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+
+        .developer-title {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+
+        .developer-content {
+          font-size: 16px;
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        .developer-skills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+              transform: scale(1.05);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .fill,
+            i {
+              pointer-events: none;
+            }
+
+            i {
+              font-size: 36px;
+              color: #f16529;
+              margin-bottom: 10px;
+            }
+
+            h3 {
+              margin: 10px 0 5px 0;
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 14px;
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#services-admin {
+  .admin-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: $primaryColor;
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .admin-form {
+    background-color: $whiteColor;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid $bgBorderColor;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: $darkGreyColor;
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid $bgBorderColor;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    }
+
+    .save-btn {
+      background-color: $primaryColor;
+      color: $whiteColor;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      i {
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color: $buttonHoverColor;
+      }
+    }
+  }
+
+  #services-card-list {
+    list-style: none;
+    padding: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      border: 1px solid $bgBorderColor;
+      border-radius: 5px;
+
+      button {
+        margin-left: 5px;
+        padding: 2px 6px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        &.edit-btn {
+          background-color: $blueColor;
+          color: $whiteColor;
+        }
+        &.delete-btn {
+          background-color: $redColor;
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}

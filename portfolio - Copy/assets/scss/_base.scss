@@ -1,0 +1,28 @@
+@use "../scss/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-image: url("../images/bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}

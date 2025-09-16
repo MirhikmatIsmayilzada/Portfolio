@@ -1,0 +1,13 @@
+
+
+@use "./base";
+
+// ?Components
+@use "./components/header";
+
+// *Pages
+@use "./pages/about";
+@use "./pages/skills";
+@use "./pages/services";
+@use "./pages/portfolio";
+
